@@ -9,13 +9,16 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
+import MainpageTpl from './templaes/MainpageTpl';
+import TodoTpl from './templaes/TodoTpl';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },{
+    element: <MainpageTpl />,
+  }, {
     path: "/todo",
-    element: <div>Hello todos!</div>,
+    element: <TodoTpl />,
   },
 ]);
 
@@ -23,6 +26,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <RouterProvider router={router} />
-    
 );
 
